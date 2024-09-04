@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class GestorInventario {
@@ -25,3 +26,22 @@ class GestorInventario {
             } // Este método define un producto que será añadido a la matriz principal
         }
     }
+
+    public static void agregarProducto(int idProducto, int cantidad, Object[][] productos) {
+
+    }
+
+    public static int solicitarId() {
+        Scanner ingresar = new Scanner(System.in);
+        System.out.println("Ingrese la ID de su producto: ");
+        int idInteresada = ingresar.nextInt();
+        try {
+            return idInteresada;
+        } catch (InputMismatchException e) {
+            System.out.println("ID no válida");
+        } finally {
+            ingresar.close();
+        }
+        return idInteresada;
+    }
+}
