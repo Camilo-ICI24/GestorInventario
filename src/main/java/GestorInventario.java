@@ -14,8 +14,6 @@ class GestorInventario {
         return productos;
     }
 
-    }
-
     public static void definirProducto(String nombreProducto, int idProducto, int cantidad, Object[][] productos) {
         for (int fila = 0; fila < productos.length; fila++) {
             for (int columna = 0; columna < 3; columna++) {
@@ -27,5 +25,3 @@ class GestorInventario {
             } // Este método define un producto que será añadido a la matriz principal
         }
     }
-
-}
